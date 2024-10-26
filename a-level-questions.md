@@ -39,20 +39,30 @@ ENDFUNCTION
 ## 2021 A Level P1 Q4
 *Solution:*
 
-a) dynamic memory allocation is more flexible than static memory allocation. 
-For static data structure, a fixed amount of memory is reserved for data even though less memory may be needed during runtime. For dynamic data structures, the person implementing the data structure can easily expand or contact the memory space as needed by the programme 
-
-b) Problems of dynamic data struct
-Inserting/ deleting will require memory allocation/ deallocation which may lead to longer runtimes or slower performance 
-dynamic data structures can potentially use up all of the memory on the system/ device causing programs that require memory to not work (contrasts with static memory allocation which only can use memory that has been allocated)
-
-c) array
-no chance of memory overflow 
-availability of binary search as a way to look up entires within the system
-
-
 ## 2021 A Level P1 Q5
 *Solution:*
+
+a) 3 features of good hash algorithm
+● Should use all parts of the input data.
+● Generate very different hash values for a small change in the input data.
+● Hash values it generates should be uniformly/ equally distributed across the entire range of possible hash values (minimise the number collisions).
+
+b) 2 Methods choose 1
+CLOSED ADDRESSING
+If collision occurs, the data is not stored in the position it is hashed to.
+Instead, another location is assigned for it to be inserted.
+eg. Linear probing: record gets inserted into next adjacent cell
+Quadratic probing: record gets inserted i**2 cells away (prevents clustering)
+
+OPEN ADDRESSING
+Collided data is always stored in the same position it is hashed to. Some other forms of data structure are usually used to store all the data
+at the calculated position(bucket). Hence, the index in the bucket where the data
+is stored should be located.
+eg. LinkedList to store collided/overflow entries
+
+c) Hash table search has average time complexity of O(1) with optimal hashing algorithm as it can directly access the location where data is located but linear search has average time complexity O(n) as it has to traverse/ iterate through the list to find the target element. hash table is more prefered than linear search to locate a record due to its increased efficiency 
+
+d) Binary Search only works if dataset is sorted in order which may not true in this situation. If dataset is not sorted, efficiency of algorithm used to sort the dataset has to be accounted for making binary search disadvantageous 
 
 ## 2021 A Level P1 Q7
 *Solution:*
